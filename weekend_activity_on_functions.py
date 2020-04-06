@@ -114,10 +114,9 @@ def red():
     a = [[1,2,3],[4,5],[6,7,8]]
     a = functools.reduce(operator.concat, a)
     print(a)
-    for x in range(0, len(a)):
-        a[x] = str(a[x])
+    a = functools.reduce(lambda x, y: str(x) + str(y), a)
     
-    return functools.reduce(operator.concat, a)
+    return a
 
 #Question 14
 
